@@ -1,2 +1,2 @@
-# proyek-pertama-saya
-Ini adalah proyek pertama untuk belajar
+# langkah penting hubungan cinta
+Proyek pertama untuk belajar
