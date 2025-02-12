@@ -1,0 +1,421 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #030a49;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main Content Styles */
+.content-wrapper {
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px 0 0 0; /* Remove bottom margin to place menu closer */
+    padding: 30px;
+    background-color: #030a49;
+    color: #e0e0e0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px hsla(237, 16%, 73%, 0.699);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+h1, h2, h3, h4 {
+    color: #ee04bb;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+}
+
+h1 i {
+    color: #ff69b4;
+    margin: 0 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(190, 183, 183, 0.322);
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content-wrapper .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: hsl(320, 100%, 41%); /* Latar belakang pink lembut */
+    border: 1px solid #ffb3c1; /* Border pink yang sedikit lebih gelap */
+    border-radius: 24px; /* Sudut membulat seperti Google Search */
+    padding: 8px 16px; /* Padding vertikal dan horizontal */
+    margin: 25px auto; /* Pusatkan dan beri margin atas bawah - **PASTIKAN INI ADA** */
+    width: 85%; /* Lebar relatif terhadap content-wrapper */
+    max-width: 600px; /* Lebar maksimum */
+    box-shadow: 0 1px 6px rgba(255, 192, 203, 0.3); /* Efek bayangan halus dengan warna pink */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease; /* Transisi untuk efek hover/focus */
+}
+
+.content-wrapper .search-bar:hover,
+.content-wrapper .search-bar:focus-within {
+    box-shadow: 0 1px 6px rgba(255, 192, 203, 0.5); /* Bayangan lebih tebal saat hover/focus dengan warna pink */
+    border-color: #ff8095; /* Border pink lebih intens saat hover/focus */
+    background-color: #ffcdd2; /* Latar belakang pink lebih terang saat hover/focus */
+}
+
+.content-wrapper .search-bar form {
+    display: flex;
+    flex: 1; /* Form mengisi ruang yang tersedia */
+    align-items: center;
+    width: 100%; /* Pastikan form 100% lebar */
+}
+
+.content-wrapper .search-bar input[type="text"] {
+    flex: 1; /* Input mengisi ruang dalam form */
+    border: none;
+    outline: none;
+    background-color: transparent; /* Latar belakang transparan */
+    color: #071746d2; /* Warna teks tetap gelap */
+    font-size: 16px; /* Ukuran font yang sesuai */
+    padding: 8px 0; /* Padding vertikal untuk input */
+    -webkit-appearance: none; /* Hapus styling default browser pada input (penting untuk Safari) */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.content-wrapper .search-bar input::placeholder {
+    color: #f48fb1; /* Placeholder warna pink */
+}
+
+.content-wrapper .search-bar span {
+    color: #f48fb1; /* Ikon warna pink */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-left: 10px; /* Jarak antara input dan ikon */
+    display: flex; /* Untuk memusatkan ikon vertikal */
+    align-items: center;
+}
+
+.content-wrapper .search-bar span:hover {
+    color: #ff4081; /* Warna ikon pink lebih intens saat hover */
+}
+
+footer {
+    background-color: #0e0752;
+    color: #bbb;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 30px; /* Add margin to separate footer from menu */
+}
+
+/* Menu Container Styles (New) */
+.menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center menu horizontally */
+    padding: 20px 0;
+    background-color: transparent; /* Make menu container background transparent */
+}
+
+.menu-buttons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center buttons within ul */
+    flex-wrap: wrap;
+    max-width: 960px; /* Limit width of buttons */
+}
+
+.menu-item {
+    margin: 5px;
+}
+
+.menu-link {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #1b3d69;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-align: center;
+    min-width: 100px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    border: 1px solid transparent;
+}
+
+.menu-link:hover {
+    background-color: #0e0752;
+    color: #00bcd4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border: 1px solid #00bcd4;
+}
+
+.menu-link i {
+    margin-right: 8px;
+    color: #00bcd4;
+    vertical-align: middle;
+}
+
+
+/* Specific styles dari CSS sebelumnya - disesuaikan untuk tema modern */
+h2#kemas-akun i, h2#percakapan i, h3#bangun-kepercayaan i, h3#percakapan-santai i, h3#strategi-pelanggan i, h3#strategi-menembak i, h4#konten-harian i, h2#perlu-diingat i, h2#kontak-kami i {
+    margin-right: 10px;
+    color: #00bcd4;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: #0d0658c4;
+    color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+th, td {
+    border-bottom: 1px solid #0e0752;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #0a0d3f;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background-color: #0e0752;
+}
+
+.container {
+    margin-bottom: 40px;
+}
+
+.conversation-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.conversation-card {
+    background-color: #0e0752;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.conversation-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.conversation-card h4 {
+    margin-top: 0;
+    color: #00bcd4;
+    font-size: 1.4em;
+}
+
+.conversation-card .card-subtitle {
+    font-style: italic;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.conversation-card p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+.container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.section {
+    background-color: #0e0752;
+    padding: 25px;
+    border-radius: 8px;
+    flex: 1 1 320px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.section:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #00bcd4;
+    font-size: 1.6em;
+}
+
+.section .content {
+    line-height: 1.7;
+    color: #ddd;
+}
+
+.section .content i {
+    margin: 0 8px;
+    color: #00bcd4;
+}
+
+.remember-section {
+    background-color: #0e0752;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: left;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+    transition: box-shadow 0.3s ease;
+}
+
+.remember-section:hover {
+    box-shadow: 0 7px 20px rgba(0,0,0,0.35);
+}
+
+.remember-section h2 {
+    margin-top: 0;
+    color: #00bcd4;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.remember-list {
+    list-style-type: decimal;
+    padding-left: 25px;
+}
+
+.remember-list li {
+    margin-bottom: 20px;
+    color: #ddd;
+    line-height: 1.7;
+}
+
+.remember-list li p {
+    margin-top: 8px;
+}
+
+.remember-list li .example {
+    background-color: #0e0752;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.remember-list li .example b {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.remember-list li .example ul {
+    padding-left: 25px;
+    list-style-type: disc;
+}
+
+.remember-list li .important {
+    color: #fcc102;
+    font-weight: bold;
+}
+
+.remember-list li .note {
+    font-style: italic;
+    color: #aaa;
+}
+
+.contact-section {
+    background-color: #0e0752;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(123, 114, 202, 0.932);
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-section:hover {
+    box-shadow: 0 7px 20px rgba(0,0,0,0.35);
+}
+
+.contact-section h2 {
+    margin-top: 0;
+    color: #00bcd4;
+    font-size: 1.8em;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+}
+
+.contact-list li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0e0752;
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    min-width: 180px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.contact-list li a:hover {
+    background-color: #0e0752;
+    color: #00bcd4;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+}
+
+.contact-list li a i {
+    margin-right: 12px;
+    color: #00bcd4;
+}
